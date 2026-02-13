@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Berimbolo Security</title>
+    <link rel="stylesheet" href="security.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="brand">
+        <img src="Berimbolo.png">
+        <h2>Berimbolo Security</h2>
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <nav class="main-nav" id="nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="promo-section">
+    <video autoplay muted loop playsinline class="promo-video">
+        <source src="promovid.mp4" type="video/mp4">
+    </video>
+
+    <div class="promo-content">
+        <h1>Professional Security Solutions</h1>
+        <p>Reliable protection for homes, businesses and organizations</p>
+        <a href="services.html" class="btn">Explore Services</a>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">About Berimbolo Security</h2>
+
+    <div class="about-text">
+        <p>
+            Berimbolo Security is a professional security company dedicated to protecting people,
+            property and businesses through reliable personnel and modern technology.
+        </p>
+
+        <p>
+            Our trained guards, surveillance systems and rapid response teams operate 24/7,
+            delivering dependable protection and peace of mind to every client.
+        </p>
+
+        <p>
+            We combine experience, discipline and innovation to provide security solutions
+            you can trust.
+        </p>
+    </div>
+</section>
+
+
+<section id="pricing">
+    <h2 class="section-title">Pricing Plans</h2>
+
+    <div class="pricing-grid">
+
+        <div class="price-card">
+            <h3>Basic</h3>
+            <div class="price">$199/mo</div>
+            <ul>
+                <li>Alarm System</li>
+                <li>24/7 Monitoring</li>
+                <li>Email Alerts</li>
+            </ul>
+            <a href="#contact" class="btn">Choose Plan</a>
+        </div>
+
+        <div class="price-card">
+            <h3>Standard</h3>
+            <div class="price">$399/mo</div>
+            <ul>
+                <li>CCTV Cameras</li>
+                <li>Mobile Patrol</li>
+                <li>Priority Response</li>
+            </ul>
+            <a href="#contact" class="btn">Choose Plan</a>
+        </div>
+
+        <div class="price-card">
+            <h3>Premium</h3>
+            <div class="price">$699/mo</div>
+            <ul>
+                <li>On-site Guards</li>
+                <li>Full Surveillance</li>
+                <li>Dedicated Support</li>
+            </ul>
+            <a href="#contact" class="btn">Choose Plan</a>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Testimonials</h2>
+    <div class="testimonials">
+        <div class="testimonial">“Very professional service and fast response.”</div>
+        <div class="testimonial">“Our business feels safer than ever.”</div>
+        <div class="testimonial">“Excellent monitoring and customer support.”</div>
+    </div>
+</section>
+
+<section id="faq">
+    <h2 class="section-title">FAQ</h2>
+    <div class="faq">
+        <details><summary>Do you operate 24/7?</summary><p>Yes, all services run around the clock.</p></details>
+        <details><summary>Can plans be customized?</summary><p>Yes, we tailor packages to client needs.</p></details>
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <form class="contact-form">
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Message"></textarea>
+        <button>Send</button>
+    </form>
+</section>
+
+<script>
+function toggleMenu(){
+    document.getElementById("nav").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
