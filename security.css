@@ -118,6 +118,7 @@ body{
     font-weight:bold;
     margin-top:10px;
     transition:.25s;
+    text-decoration: none;
 }
 
 .btn:hover{
@@ -402,5 +403,6 @@ button{
     margin-bottom:20px;
     color:var(--muted);
 }
+
 
 
