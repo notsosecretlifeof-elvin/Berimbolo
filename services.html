@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Services | Berimbolo Security</title>
+<link rel="stylesheet" href="security.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="brand">
+        <a href="index.html"><img src="Berimbolo.png" alt="Logo"></a>
+        <h2>Berimbolo Security</h2>
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <nav class="main-nav" id="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#order">Order</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="service-hero">
+    <h1>Our Security Services</h1>
+    <p>Choose the protection plan that fits your needs</p>
+</section>
+
+<!-- SERVICES GRID -->
+<section id="services">
+    <div class="service-grid">
+
+        <div class="service-card" data-price="699">
+            <img src="Security.jpg" alt="Security Guards">
+            <h3>Security Guards</h3>
+            <p>On-site professional guards for physical protection.</p>
+            <div class="service-price">$699 / month</div>
+            <div class="cart-controls">
+                <button onclick="updateCart(this, -1)">-</button>
+                <span class="quantity">0</span>
+                <button onclick="updateCart(this, 1)">+</button>
+            </div>
+        </div>
+
+        <div class="service-card" data-price="399">
+            <img src="service-cctv.jpg" alt="CCTV Monitoring">
+            <h3>CCTV Monitoring</h3>
+            <p>24/7 surveillance and remote monitoring systems.</p>
+            <div class="service-price">$399 / month</div>
+            <div class="cart-controls">
+                <button onclick="updateCart(this, -1)">-</button>
+                <span class="quantity">0</span>
+                <button onclick="updateCart(this, 1)">+</button>
+            </div>
+        </div>
+
+        <div class="service-card" data-price="199">
+            <img src="service-alarm.jpg" alt="Alarm Systems">
+            <h3>Alarm Systems</h3>
+            <p>Smart intrusion detection with instant alerts.</p>
+            <div class="service-price">$199 / month</div>
+            <div class="cart-controls">
+                <button onclick="updateCart(this, -1)">-</button>
+                <span class="quantity">0</span>
+                <button onclick="updateCart(this, 1)">+</button>
+            </div>
+        </div>
+
+        <div class="service-card" data-price="299">
+            <img src="service-patrol.jpg" alt="Mobile Patrol">
+            <h3>Mobile Patrol</h3>
+            <p>Rapid response vehicles for emergency situations.</p>
+            <div class="service-price">$299 / month</div>
+            <div class="cart-controls">
+                <button onclick="updateCart(this, -1)">-</button>
+                <span class="quantity">0</span>
+                <button onclick="updateCart(this, 1)">+</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CART / ORDER -->
+<section id="order">
+    <h2 class="section-title">Your Selected Services</h2>
+
+    <div class="cart-box">
+        <div class="cart-list" id="cartList">
+            No services selected yet
+        </div>
+
+        <form class="contact-form">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Additional requirements"></textarea>
+            <button>Request Quote</button>
+        </form>
+    </div>
+</section>
+
+<script>
+function toggleMenu() {
+    document.getElementById("nav").classList.toggle("active");
+}
+
+let cart = {};
+
+function updateCart(button, change){
+    const card = button.closest('.service-card');
+    const serviceName = card.querySelector('h3').innerText;
+    const price = parseInt(card.dataset.price);
+    const qtyElem = card.querySelector('.quantity');
+
+    let quantity = parseInt(qtyElem.innerText) + change;
+    if(quantity < 0) quantity = 0;
+    qtyElem.innerText = quantity;
+
+    if(quantity === 0){
+        delete cart[serviceName];
+    } else {
+        cart[serviceName] = quantity * price;
+    }
+
+    updateCartList();
+}
+
+function updateCartList(){
+    const cartList = document.getElementById('cartList');
+    if(Object.keys(cart).length === 0){
+        cartList.innerHTML = "No services selected yet";
+        return;
+    }
+
+    let html = "";
+    let total = 0;
+    for(let service in cart){
+        html += `${service}: $${cart[service]}<br>`;
+        total += cart[service];
+    }
+    html += `<hr>Total: $${total}`;
+    cartList.innerHTML = html;
+}
+</script>
+
+</body>
+</html>
