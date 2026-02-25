@@ -314,7 +314,7 @@ button{
 }
 
 .contact-section{
-    background: rgba(255,255,255,0.03);
+    background: rgba(255,255,255,0.04);
 }
 .service-hero{
     text-align:center;
@@ -408,6 +408,7 @@ button{
     margin-bottom:20px;
     color:var(--muted);
 }
+
 
 
 
