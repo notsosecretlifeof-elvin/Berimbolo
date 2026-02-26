@@ -159,6 +159,7 @@ section{
 
 .about-text p{
     margin-bottom:18px;
+    font-size:30px;
 }
 
 /* ---------- PRICING ---------- */
@@ -412,6 +413,7 @@ button{
     margin-bottom:20px;
     color:var(--muted);
 }
+
 
 
 
