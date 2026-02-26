@@ -25,6 +25,9 @@ body{
     line-height:1.7;
 }
 
+body p{
+    font-size:30px;
+}
 /* ---------- HEADER ---------- */
 
 .site-header{
@@ -409,6 +412,7 @@ button{
     margin-bottom:20px;
     color:var(--muted);
 }
+
 
 
 
