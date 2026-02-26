@@ -32,6 +32,12 @@ a { text-decoration: none; color: var(--text); }
     backdrop-filter: blur(8px);
 }
 
+.logo{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
 .brand { display: flex; align-items: center; gap: 12px; }
 .brand img { width: 70px; }
 .brand h2 { font-size: 1.6rem; }
@@ -188,3 +194,4 @@ a { text-decoration: none; color: var(--text); }
         grid-template-columns: 1fr;
     }
 }
+
