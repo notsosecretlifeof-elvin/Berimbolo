@@ -112,6 +112,7 @@ body{
 .promo-content p{
     color:var(--muted);
     margin-bottom:25px;
+    font-size:30px;
 }
 
 .btn{
@@ -408,6 +409,7 @@ button{
     margin-bottom:20px;
     color:var(--muted);
 }
+
 
 
 
